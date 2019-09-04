@@ -654,3 +654,9 @@ variable "volumes_from" {
   description = "A list of VolumesFrom maps which contain \"sourceContainer\" (name of the container that has the volumes to mount) and \"readOnly\" (whether the container can write to the volume)."
   default     = []
 }
+
+variable "volumes" {
+  type        = "list"
+  description = "Task volume definitions as list of maps"
+  default     = []
+}

@@ -207,6 +207,7 @@ Available targets:
 | secrets | The secrets for the task definition. This is a list of maps | list | `<list>` | no |
 | stage | Stage (e.g. `prod`, `dev`, `staging`) | string | - | yes |
 | tags | Map of key-value pairs to use for tags | map | `<map>` | no |
+| volumes | Task volume definitions as list of maps | list | `<list>` | no |
 | volumes_from | A list of VolumesFrom maps which contain "sourceContainer" (name of the container that has the volumes to mount) and "readOnly" (whether the container can write to the volume). | list | `<list>` | no |
 | vpc_id | The VPC ID where resources are created | string | - | yes |
 | webhook_authentication | The type of authentication to use. One of IP, GITHUB_HMAC, or UNAUTHENTICATED | string | `GITHUB_HMAC` | no |

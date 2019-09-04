@@ -108,6 +108,7 @@ module "ecs_alb_service_task" {
   subnet_ids                        = ["${var.ecs_private_subnet_ids}"]
   container_port                    = "${var.container_port}"
   tags                              = "${var.tags}"
+  volumes                           = "${var.volumes}"
 }
 
 module "ecs_codepipeline" {
