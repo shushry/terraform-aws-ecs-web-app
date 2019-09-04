@@ -635,3 +635,22 @@ variable "codepipeline_s3_bucket_force_destroy" {
   description = "A boolean that indicates all objects should be deleted from the CodePipeline artifact store S3 bucket so that the bucket can be destroyed without error"
   default     = false
 }
+
+variable "mount_points" {
+  type        = "list"
+  description = "Container mount points. This is a list of maps, where each map should contain a `containerPath` and `sourceVolume`"
+  default     = []
+
+  #default     = [
+  #  {
+  #    containerPath  = "/tmp"
+  #    sourceVolume = "test-volume"
+  #  }
+  #]
+}
+
+variable "volumes_from" {
+  type        = "list"
+  description = "A list of VolumesFrom maps which contain \"sourceContainer\" (name of the container that has the volumes to mount) and \"readOnly\" (whether the container can write to the volume)."
+  default     = []
+}

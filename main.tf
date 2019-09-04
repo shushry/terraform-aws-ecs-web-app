@@ -67,7 +67,7 @@ module "alb_ingress" {
 }
 
 module "container_definition" {
-  source                       = "git::https://github.com/cloudposse/terraform-aws-ecs-container-definition.git?ref=tags/0.9.1"
+  source                       = "git::https://github.com/cloudposse/terraform-aws-ecs-container-definition.git?ref=tags/0.10.0"
   container_name               = "${module.default_label.id}"
   container_image              = "${var.container_image}"
   container_memory             = "${var.container_memory}"
@@ -75,8 +75,10 @@ module "container_definition" {
   container_cpu                = "${var.container_cpu}"
   healthcheck                  = "${var.healthcheck}"
   environment                  = "${var.environment}"
+  mount_points                 = "${var.mount_points}"
   port_mappings                = "${var.port_mappings}"
   secrets                      = "${var.secrets}"
+  volumes_from                 = "${var.volumes_from}"
 
   log_options = {
     "awslogs-region"        = "${var.aws_logs_region}"
