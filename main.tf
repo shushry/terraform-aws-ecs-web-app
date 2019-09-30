@@ -109,6 +109,7 @@ module "ecs_alb_service_task" {
   container_port                    = "${var.container_port}"
   tags                              = "${var.tags}"
   volumes                           = "${var.volumes}"
+  network_mode                      = "${var.network_mode}"
 }
 
 module "ecs_codepipeline" {

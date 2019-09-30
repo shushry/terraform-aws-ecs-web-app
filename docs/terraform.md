@@ -97,6 +97,7 @@
 | mount_points | Container mount points. This is a list of maps, where each map should contain a `containerPath` and `sourceVolume` | list | `<list>` | no |
 | name | Name (unique identifier for app or service) | string | - | yes |
 | namespace | Namespace (e.g. `eg` or `cp`) | string | - | yes |
+| network_mode | The network mode to use for the task. This is required to be awsvpc for FARGATE launch_type | string | `awsvpc` | no |
 | poll_source_changes | Periodically check the location of your source content and run the pipeline if changes are detected | string | `false` | no |
 | port_mappings | The port mappings to configure for the container. This is a list of maps. Each map should contain "containerPort", "hostPort", and "protocol", where "protocol" is one of "tcp" or "udp". If using containers in a task with the awsvpc or host network mode, the hostPort can either be left blank or set to the same value as the containerPort | list | `<list>` | no |
 | protocol | The protocol used for the port mapping. Options: `tcp` or `udp` | string | `tcp` | no |
