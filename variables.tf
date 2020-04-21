@@ -34,7 +34,7 @@ variable "tags" {
 variable "codepipeline_enabled" {
   type        = "string"
   description = "A boolean to enable/disable AWS Codepipeline and ECR"
-  default     = "true"
+  default     = "false"
 }
 
 variable "container_image" {
@@ -524,7 +524,7 @@ variable "poll_source_changes" {
 
 variable "webhook_enabled" {
   description = "Set to false to prevent the module from creating any webhook resources"
-  default     = "true"
+  default     = "false"
 }
 
 variable "webhook_target_action" {
