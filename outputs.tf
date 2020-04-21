@@ -28,18 +28,18 @@ output "service_security_group_id" {
   value       = "${module.ecs_alb_service_task.service_security_group_id}"
 }
 
-output "badge_url" {
-  description = "The URL of the build badge when `badge_enabled` is enabled"
-  value       = "${module.ecs_codepipeline.badge_url}"
-}
-
-output "webhook_id" {
-  description = "The CodePipeline webhook's ARN."
-  value       = "${module.ecs_codepipeline.webhook_id}"
-}
-
-output "webhook_url" {
-  description = "The CodePipeline webhook's URL. POST events to this endpoint to trigger the target."
-  value       = "${module.ecs_codepipeline.webhook_url}"
-  sensitive   = true
-}
+#output "badge_url" {
+#  description = "The URL of the build badge when `badge_enabled` is enabled"
+#  value       = "${module.ecs_codepipeline.badge_url}"
+#}
+#
+#output "webhook_id" {
+#  description = "The CodePipeline webhook's ARN."
+#  value       = "${module.ecs_codepipeline.webhook_id}"
+#}
+#
+#output "webhook_url" {
+#  description = "The CodePipeline webhook's URL. POST events to this endpoint to trigger the target."
+#  value       = "${module.ecs_codepipeline.webhook_url}"
+#  sensitive   = true
+#}
